@@ -1,7 +1,3 @@
-<picture>
-  <img alt="#Wordlift" width="200" src="https://eacn2n47zot.exactdn.com/wp-content/uploads/2022/12/logo.svg" style="margin-bottom: 25px;">
-</picture>
-
 # LlamaIndex Vector_Stores Integration: Wordlift
 
 Wordlift is an AI-powered SEO platform. With our AI we build your own knowledge graph for your business with entities marked up by the different topics, categories and regions. Using this graph, search engines will be able to understand the structure of your content faster and more precisely. To access a Wordlift key and unlock our AI-powered SEO tools, visit [Wordlift](https://wordlift.io/).

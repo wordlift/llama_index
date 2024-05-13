@@ -2,12 +2,11 @@
 from typing import Any, Dict, List, Optional, Sequence, Type
 
 from llama_index.core.callbacks.base import CallbackManager
-from llama_index.core.node_parser.node_utils import build_nodes_from_splits
 from llama_index.core.node_parser.file.html import HTMLNodeParser
 from llama_index.core.node_parser.file.json import JSONNodeParser
 from llama_index.core.node_parser.file.markdown import MarkdownNodeParser
 from llama_index.core.node_parser.interface import NodeParser
-from llama_index.core.schema import BaseNode, MetadataMode
+from llama_index.core.schema import BaseNode
 from llama_index.core.utils import get_tqdm_iterable
 
 FILE_NODE_PARSERS: Dict[str, Type[NodeParser]] = {
@@ -66,7 +65,7 @@ class SimpleFileNodeParser(NodeParser):
         )
 
         for document in documents_with_progress:
-            ext = document.metadata.get("extension", "None")
+            ext = document.metadata["extension"]
             if ext in FILE_NODE_PARSERS:
                 parser = FILE_NODE_PARSERS[ext](
                     include_metadata=self.include_metadata,
@@ -78,13 +77,6 @@ class SimpleFileNodeParser(NodeParser):
                 all_nodes.extend(nodes)
             else:
                 # What to do when file type isn't supported yet?
-                all_nodes.extend(
-                    # build node from document
-                    build_nodes_from_splits(
-                        [document.get_content(metadata_mode=MetadataMode.NONE)],
-                        document,
-                        id_func=self.id_func,
-                    )
-                )
+                all_nodes.extend(document)
 
         return all_nodes

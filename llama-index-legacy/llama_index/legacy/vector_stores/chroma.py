@@ -305,7 +305,7 @@ class ChromaVectorStore(BasePydanticVectorStore):
             **kwargs,
         )
 
-        logger.debug(f"> Top {len(results['documents'][0])} nodes:")
+        logger.debug(f"> Top {len(results['documents'])} nodes:")
         nodes = []
         similarities = []
         ids = []

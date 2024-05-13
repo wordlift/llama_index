@@ -11,7 +11,7 @@ lint:	## Run linters: pre-commit (black, ruff, codespell) and mypy
 	poetry run pre-commit install && git ls-files | xargs poetry run pre-commit run --show-diff-on-failure --files
 
 typecheck:
-	poetry run mypy --explicit-package-bases llama_index
+	poetry run mypy .
 
 test:	## Run tests via pytest.
 	poetry run pytest tests

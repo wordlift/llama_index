@@ -162,17 +162,16 @@ class GoogleCalendarToolSpec(BaseToolSpec):
         credentials = self._get_credentials()
         service = build("calendar", "v3", credentials=credentials)
 
-        attendees_list = (
-            [{"email": attendee} for attendee in attendees] if attendees else []
-        )
-
+        attendees_list = []
+        for attendee in attendees:
+            attendees_list.append({"email": attendee})
         start_time = (
-            datetime.datetime.strptime(start_datetime, "%Y-%m-%dT%H:%M:%S%z")
+            datetime.datetime.strptime(start_datetime, "%Y-%m-%dT%H:%M:%S")
             .astimezone()
             .strftime("%Y-%m-%dT%H:%M:%S.%f%z")
         )
         end_time = (
-            datetime.datetime.strptime(end_datetime, "%Y-%m-%dT%H:%M:%S%z")
+            datetime.datetime.strptime(end_datetime, "%Y-%m-%dT%H:%M:%S")
             .astimezone()
             .strftime("%Y-%m-%dT%H:%M:%S.%f%z")
         )

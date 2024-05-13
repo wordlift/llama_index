@@ -74,12 +74,7 @@ class AstraDBReader(BaseReader):
         Returns:
             List[Document]: A list of documents.
         """
-        results = self._collection.vector_find(
-            vector,
-            limit=limit,
-            fields=["*"],
-            **kwargs,
-        )
+        results = self._collection.vector_find(vector, limit=limit, **kwargs)
 
         documents: List[Document] = []
         for result in results:

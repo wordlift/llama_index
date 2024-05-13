@@ -46,12 +46,11 @@ class AzureOpenAIEmbedding(OpenAIEmbedding):
         # azure specific
         azure_endpoint: Optional[str] = None,
         azure_deployment: Optional[str] = None,
-        azure_ad_token_provider: Optional[AzureADTokenProvider] = None,
+        azure_ad_token_provider: AzureADTokenProvider = None,
         deployment_name: Optional[str] = None,
         max_retries: int = 10,
         reuse_client: bool = True,
         callback_manager: Optional[CallbackManager] = None,
-        num_workers: Optional[int] = None,
         # custom httpx client
         http_client: Optional[httpx.Client] = None,
         **kwargs: Any,
@@ -59,8 +58,6 @@ class AzureOpenAIEmbedding(OpenAIEmbedding):
         azure_endpoint = get_from_param_or_env(
             "azure_endpoint", azure_endpoint, "AZURE_OPENAI_ENDPOINT", ""
         )
-
-        api_key = get_from_param_or_env("api_key", api_key, "AZURE_OPENAI_API_KEY")
 
         azure_deployment = resolve_from_aliases(
             azure_deployment,
@@ -81,7 +78,6 @@ class AzureOpenAIEmbedding(OpenAIEmbedding):
             reuse_client=reuse_client,
             callback_manager=callback_manager,
             http_client=http_client,
-            num_workers=num_workers,
             **kwargs,
         )
 

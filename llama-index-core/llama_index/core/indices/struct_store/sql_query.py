@@ -75,14 +75,8 @@ class SQLStructStoreQueryEngine(BaseQueryEngine):
     NOTE: deprecated in favor of SQLTableRetriever, kept for backward compatibility.
 
     Runs raw SQL over a SQLStructStoreIndex. No LLM calls are made here.
-
     NOTE: this query cannot work with composed indices - if the index
     contains subindices, those subindices will not be queried.
-
-    NOTE: Any Text-to-SQL application should be aware that executing
-    arbitrary SQL queries can be a security risk. It is recommended to
-    take precautions as needed, such as using restricted roles, read-only
-    databases, sandboxing, etc.
     """
 
     def __init__(
@@ -143,11 +137,6 @@ class NLStructStoreQueryEngine(BaseQueryEngine):
 
     NOTE: this query cannot work with composed indices - if the index
     contains subindices, those subindices will not be queried.
-
-    NOTE: Any Text-to-SQL application should be aware that executing
-    arbitrary SQL queries can be a security risk. It is recommended to
-    take precautions as needed, such as using restricted roles, read-only
-    databases, sandboxing, etc.
 
     Args:
         index (SQLStructStoreIndex): A SQL Struct Store Index
@@ -312,14 +301,6 @@ def _validate_prompt(
 
 
 class BaseSQLTableQueryEngine(BaseQueryEngine):
-    """Base SQL Table query engine.
-
-    NOTE: Any Text-to-SQL application should be aware that executing
-    arbitrary SQL queries can be a security risk. It is recommended to
-    take precautions as needed, such as using restricted roles, read-only
-    databases, sandboxing, etc.
-    """
-
     def __init__(
         self,
         llm: Optional[LLM] = None,
@@ -442,11 +423,6 @@ class NLSQLTableQueryEngine(BaseSQLTableQueryEngine):
     Natural language SQL Table query engine.
 
     Read NLStructStoreQueryEngine's docstring for more info on NL SQL.
-
-    NOTE: Any Text-to-SQL application should be aware that executing
-    arbitrary SQL queries can be a security risk. It is recommended to
-    take precautions as needed, such as using restricted roles, read-only
-    databases, sandboxing, etc.
     """
 
     def __init__(
@@ -504,11 +480,6 @@ class PGVectorSQLQueryEngine(BaseSQLTableQueryEngine):
     we can infer embedding vectors in the sql query.
 
     NOTE: this is a beta feature
-
-    NOTE: Any Text-to-SQL application should be aware that executing
-    arbitrary SQL queries can be a security risk. It is recommended to
-    take precautions as needed, such as using restricted roles, read-only
-    databases, sandboxing, etc.
 
     """
 

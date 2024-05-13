@@ -11,7 +11,6 @@
         - RssReader
         - SimpleWebPageReader
         - SitemapReader
-        - SpiderReader
         - TrafilaturaWebReader
         - UnstructuredURLLoader
         - WholeSiteReader

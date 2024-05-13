@@ -7,4 +7,3 @@ playwright~=1.42.0
 newspaper3k
 selenium
 chromedriver-autoinstaller
-spider-client

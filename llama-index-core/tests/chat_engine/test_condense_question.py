@@ -21,19 +21,17 @@ def test_condense_question_chat_engine(
 
     engine.reset()
     response = engine.chat("Test message 1")
-    assert str(response) == "Test message 1"
+    assert str(response) == "{'question': 'Test message 1', 'chat_history': ''}"
 
     response = engine.chat("Test message 2")
     assert str(response) == (
-        "{"
-        "'question': 'Test message 2', "
-        "'chat_history': 'user: Test message 1\\nassistant: Test message 1'"
-        "}"
+        "{'question': 'Test message 2', 'chat_history': \"user: Test message 1"
+        "\\nassistant: {'question': 'Test message 1', 'chat_history': ''}\"}"
     )
 
     engine.reset()
     response = engine.chat("Test message 3")
-    assert str(response) == "Test message 3"
+    assert str(response) == "{'question': 'Test message 3', 'chat_history': ''}"
 
 
 def test_condense_question_chat_engine_with_init_history(

@@ -9,8 +9,7 @@ import requests
 from llama_index.core.readers.base import BaseReader
 from llama_index.core.schema import Document
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.ERROR)
+logging.basicConfig(level=logging.ERROR)
 
 
 class OpenAlexReader(BaseReader):
@@ -47,11 +46,11 @@ class OpenAlexReader(BaseReader):
                 raise ValueError(f"API returned error: {data['error']}")
             return data
         except requests.exceptions.HTTPError as http_error:
-            logger.error(f"HTTP error occurred: {http_error}")
+            logging.error(f"HTTP error occurred: {http_error}")
         except requests.exceptions.RequestException as request_error:
-            logger.error(f"Error occurred: {request_error}")
+            logging.error(f"Error occurred: {request_error}")
         except ValueError as value_error:
-            logger.error(value_error)
+            logging.error(value_error)
         return None
 
     def _fulltext_search_openalex(self, query, fields):
@@ -67,11 +66,11 @@ class OpenAlexReader(BaseReader):
                 raise ValueError(f"API returned error: {data['error']}")
             return data
         except requests.exceptions.HTTPError as http_error:
-            logger.error(f"HTTP error occurred: {http_error}")
+            logging.error(f"HTTP error occurred: {http_error}")
         except requests.exceptions.RequestException as request_error:
-            logger.error(f"Error occurred: {request_error}")
+            logging.error(f"Error occurred: {request_error}")
         except ValueError as value_error:
-            logger.error(value_error)
+            logging.error(value_error)
         return None
 
     def _invert_abstract(self, inv_index):

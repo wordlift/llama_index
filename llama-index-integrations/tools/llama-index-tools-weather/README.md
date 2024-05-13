@@ -5,7 +5,7 @@ This tool connects to the [OpenWeatherMap](https://openweathermap.org/api)'s One
 The tool has access to the following functions:
 
 - the current weather
-- the weather tomorrow
+- the the weather tomorrow
 
 ## Usage
 

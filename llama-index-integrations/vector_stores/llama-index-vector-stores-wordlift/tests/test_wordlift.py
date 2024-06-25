@@ -4,7 +4,7 @@ from unittest.mock import MagicMock, patch, AsyncMock
 
 from llama_index.core.vector_stores import VectorStoreQuery, VectorStoreQueryResult
 
-from manager_client import (
+from wordlift_client.manager_client import (
     PageVectorSearchQueryResponseItem,
     VectorSearchQueryResponseItem,
 )

@@ -43,6 +43,7 @@ as the storage backend for `VectorStoreIndex`.
 - Upstash (`UpstashVectorStore`). [Quickstart](https://upstash.com/docs/vector/overall/getstarted)
 - Vertex AI Vector Search (`VertexAIVectorStore`). [Quickstart](https://cloud.google.com/vertex-ai/docs/vector-search/quickstart)
 - Weaviate (`WeaviateVectorStore`). [Installation](https://weaviate.io/developers/weaviate/installation). [Python Client](https://weaviate.io/developers/weaviate/client-libraries/python).
+- WordLift (`WordliftVectorStore`). [Quickstart]()
 - Zep (`ZepVectorStore`). [Installation](https://docs.getzep.com/deployment/quickstart/). [Python Client](https://docs.getzep.com/sdk/).
 - Zilliz (`MilvusVectorStore`). [Quickstart](https://zilliz.com/doc/quick_start)
 
@@ -711,6 +712,16 @@ client = weaviate.Client(
 vector_store = WeaviateVectorStore(weaviate_client=client)
 ```
 
+**WordLift**
+
+```python
+from llama_index.vector_stores.wordlift import WordliftVectorStore
+
+
+# construct vector store
+vector_store = WordliftVectorStore.create("your_WordLift_key")
+```
+
 **Zep**
 
 Zep stores texts, metadata, and embeddings. All are returned in search results.
@@ -905,4 +916,5 @@ documents = reader.load_data(
 - [Upstash](../../examples/vector_stores/UpstashVectorDemo.ipynb)
 - [Weaviate](../../examples/vector_stores/WeaviateIndexDemo.ipynb)
 - [Weaviate Hybrid Search](../../examples/vector_stores/WeaviateIndexDemo-Hybrid.ipynb)
+- [WordLift](../../examples/vector_stores/wordlift_vector_store_demo.ipynb)
 - [Zep](../../examples/vector_stores/ZepIndexDemo.ipynb)

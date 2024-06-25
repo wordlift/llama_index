@@ -16,7 +16,7 @@ We are actively adding more integrations and improving feature coverage for each
 | Vector Store             | Type                    | Metadata Filtering | Hybrid Search | Delete | Store Documents | Async |
 | ------------------------ | ----------------------- | ------------------ | ------------- | ------ | --------------- | ----- |
 | Alibaba Cloud OpenSearch | cloud                   | ✓                  |               | ✓      | ✓               | ✓     |
-| Apache Cassandra®       | self-hosted / cloud     | ✓                  |               | ✓      | ✓               |       |
+| Apache Cassandra®        | self-hosted / cloud     | ✓                  |               | ✓      | ✓               |       |
 | Astra DB                 | cloud                   | ✓                  |               | ✓      | ✓               |       |
 | Azure AI Search          | cloud                   | ✓                  | ✓             | ✓      | ✓               |       |
 | Azure CosmosDB MongoDB   | cloud                   |                    |               | ✓      | ✓               |       |
@@ -60,6 +60,7 @@ We are actively adding more integrations and improving feature coverage for each
 | Vespa                    | self-hosted / cloud     | ✓                  | ✓             | ✓      | ✓               |       |
 | Vertex AI Vector Search  | cloud                   | ✓                  |               | ✓      | ✓               |       |
 | Weaviate                 | self-hosted / cloud     | ✓                  | ✓             | ✓      | ✓               |       |
+| WordLift                 | self-hosted / cloud     | ✓                  | ✓             |        | ✓               | ✓     |
 
 For more details, see [Vector Store Integrations](../../community/integrations/vector_stores.md).
 
@@ -113,4 +114,5 @@ For more details, see [Vector Store Integrations](../../community/integrations/v
 - [Vertex AI Vector Search](../../examples/vector_stores/VertexAIVectorSearchDemo.ipynb)
 - [Weaviate](../../examples/vector_stores/WeaviateIndexDemo.ipynb)
 - [Weaviate Hybrid Search](../../examples/vector_stores/WeaviateIndexDemo-Hybrid.ipynb)
+- [WordLift](../../examples/vector_stores/wordlift_vector_store_demo.ipynb)
 - [Zep](../../examples/vector_stores/ZepIndexDemo.ipynb)

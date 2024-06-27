@@ -9,8 +9,8 @@ from llama_index.core.vector_stores.types import (
     VectorStore,
 )
 
-from wordlift_client.manager_client import NodeRequest, VectorSearchQueryRequest
-from wordlift_client.manager_client.exceptions import ServiceException
+from wordlift_client import NodeRequest, VectorSearchQueryRequest
+from wordlift_client.exceptions import ServiceException
 from utils import (
     VectorSearchService,
     WordliftVectorStoreException,

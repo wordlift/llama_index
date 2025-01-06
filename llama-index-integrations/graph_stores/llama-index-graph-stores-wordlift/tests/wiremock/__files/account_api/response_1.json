@@ -1,0 +1,26 @@
+{
+  "accountId": 1500290,
+  "subscriptionId": 150280,
+  "datasetUri": "https://data.wordlift.io/wl78195/",
+  "language": "en",
+  "datasetId": "60337dbdf14d0b416fd09c63",
+  "url": "https://wordlift.www.localhost",
+  "wpJson": "https://wordlift.localhost/wp-json",
+  "wpAdmin": "https://wordlift.localhost/wp-admin",
+  "googleSearchConsoleSiteUrl": null,
+  "key": "key609433189806627",
+  "features": {
+    "wordpress-plugin-diagnostics": true,
+    "gardening-kg": true,
+    "food-kg": true,
+    "analysis-ng": true,
+    "include-exclude": true,
+    "dataset-ng": true,
+    "kpi-events": true,
+    "linked-data": true,
+    "entity-types-business": true
+  },
+  "networks": [],
+  "includeExcludeDefault": "include",
+  "ngDatasetId": "60337dbdf14d0b416fd09c63"
+}

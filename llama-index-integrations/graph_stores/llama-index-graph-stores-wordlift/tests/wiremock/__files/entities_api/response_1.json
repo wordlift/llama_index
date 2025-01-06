@@ -1,0 +1,20 @@
+{
+  "@id": "https://data.wordlift.io/wl78195/things/hello-world",
+  "@type": "Thing",
+  "description": "Hello World 24-12-24-b",
+  "mainEntityOfPage": {
+    "@id": "https://sites-dev.wordlift.it/account-1529923/entity-1"
+  },
+  "mentions": {
+    "@id": "https://data.wordlift.io/wl78195/things/entity-2"
+  },
+  "name": "Hello World",
+  "url": {
+    "@id": "https://sites-dev.wordlift.it/account-1529923/vocabulary/hello-world/"
+  },
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "schemas": "https://schema.org/",
+    "@vocab": "http://schema.org/"
+  }
+}

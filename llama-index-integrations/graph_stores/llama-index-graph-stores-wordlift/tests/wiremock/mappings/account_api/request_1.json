@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/accounts/me",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Key key609433189806627"
+      },
+      "Accept": {
+        "equalTo": "application/vnd.wordlift.account-info.v2+json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "account_api/response_1.json",
+    "headers": {
+      "Content-Type": "application/vnd.wordlift.account-info.v2+json"
+    }
+  }
+}

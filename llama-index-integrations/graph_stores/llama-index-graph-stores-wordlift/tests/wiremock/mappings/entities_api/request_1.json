@@ -1,0 +1,35 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/entities",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Key key609433189806627"
+      },
+      "Accept": {
+        "equalTo": "application/ld+json"
+      }
+    },
+    "queryParameters": {
+      "id": {
+        "equalTo": "https://data.wordlift.io/wl78195/things/hello-world"
+      },
+      "include_children": {
+        "equalTo": "false"
+      },
+      "include_referenced": {
+        "equalTo": "false"
+      },
+      "include_private": {
+        "equalTo": "true"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "entities_api/response_1.json",
+    "headers": {
+      "Content-Type": "application/ld+json"
+    }
+  }
+}
